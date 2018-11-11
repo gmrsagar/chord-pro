@@ -15,17 +15,16 @@ class App extends Component {
   render() {
     return (
       <div>
-        <a onClick={ this.togglePercent }>Toggle</a>
-        <ProgressArc
-          height={300}
-          width={300}
-          innerRadius={100}
-          outerRadius={110}
-          id="d3-arc"
-          backgroundColor = '#e6e6e6'
-          foregroundColor = '#00ff00'
-          percentComplete = {this.state.percentComplete}
-        />
+        <ul class='circle-container'>
+          <li><img src='http://lorempixel.com/100/100/city' alt="..." /></li>
+          <li><img src='http://lorempixel.com/100/100/nature' alt="..." /></li>
+          <li><img src='http://lorempixel.com/100/100/abstract' alt="..." /></li>
+          <li><img src='http://lorempixel.com/100/100/cats' alt="..." /></li>
+          <li><img src='http://lorempixel.com/100/100/food' alt="..." /></li>
+          <li><img src='http://lorempixel.com/100/100/animals' alt="..." /></li>
+          <li><img src='http://lorempixel.com/100/100/business' alt="..." /></li>
+          <li><img src='http://lorempixel.com/100/100/people' alt="..." /></li>
+        </ul>
       </div>
     );
   }
