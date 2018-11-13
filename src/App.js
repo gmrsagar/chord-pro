@@ -1,34 +1,26 @@
 import React, { Component } from 'react';
+import Circle from './components/circle-nav/Circle'
 
 class App extends Component {
 
   state = {
-    muso: false
+    x: '',
+    y: ''
   }
 
-  hover = () => {
+  hover = e => {
     this.setState({
-      muso: !this.state.muso
+      x: e.screenX,
+      y: e.screenY
     })
   }
 
   render() {
     return (
-      <div>
-        <ul onMouseOver={this.hover} class='circle-container text-center'>
-        <li>A</li>
-        <li>B</li>
-        <li>C</li>
-        <li>D</li>
-        <li>E</li>
-        <li>F</li>
-        <li>G</li>
-        <li>A</li>
-        <li>B</li>
-        <li>C</li>
-        <li>D</li>
-        <li>E</li>
-        </ul>
+      <div className="container">
+        <div className="row">
+          <Circle hover={this.hover} gradientDegree={this.state.y}/>
+        </div>
       </div>
     );
   }

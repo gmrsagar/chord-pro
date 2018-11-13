@@ -22,7 +22,7 @@
         &:nth-of-type(#{$i}) {
           transform: 
             rotate($rot * 1deg) 
-            translate($circle-size /2) 
+            translate( ($circle-size + 4) /2) 
             rotate($rot * -1deg);
         }
   
@@ -37,10 +37,12 @@
   //scss
 
   .circle-container {
-    @include on-circle($item-count: 12, $circle-size: 24em, $item-size: 1.2em); 
+    @include on-circle($item-count: 12, $circle-size: 19em, $item-size: 1.2em); 
     margin: 8em auto 0;
-    background-image: url('assets/dial.png');
+    // background-image: url('assets/dial.png');
+    // background-image: linear-gradient(90deg, purple, pink);
     background-size: 100%;
+    background-repeat: no-repeat;
     background-position: center;
 
     
