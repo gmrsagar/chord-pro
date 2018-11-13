@@ -28,15 +28,15 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="container">
+        <div className="container top-section">
           <div className="row">
             <div className="dial-container">
               <Circle hover={this.hover} pageX={this.state.x} pageY={this.state.y}/>
             </div>
           </div>
           <div className="row">
-            <div className="col-md-12">Chord Progressions for</div>
-            <div className="col-md-12 chord-selector">
+            <div className="col-md-12 text-center">Chord Progressions for</div>
+            <div className="col text-center chord-selector">
               <Select options={notes}/>
               <Select options={keys}/>
             </div>
