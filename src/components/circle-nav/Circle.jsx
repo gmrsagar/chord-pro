@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 
 class Circle extends Component {
+
+  constructor(props) {
+    super(props)
+    this.myDial = React.createRef()
+  }
+
   state = { 
-    gradientDegree: 90
+    pageX: 100,
+    pageY: 100
    }
   
   mouseToDeg = mouseX => {
@@ -12,16 +19,22 @@ class Circle extends Component {
   }
 
   componentWillReceiveProps() {
-    let newDegree = this.mouseToDeg(this.props.gradientDegree)
+    // let newDegree = this.mouseToDeg(this.props.gradientDegree)
     this.setState({
-      gradientDegree: newDegree
+      pageX: this.props.pageX - this.myDial.current.offsetLeft,
+      pageY: this.props.pageY - this.myDial.current.offsetTop
     })
 
   }
 
   render() {
     return (
-      <ul style={{backgroundImage: 'linear-gradient(' + this.state.gradientDegree + 'deg, purple, pink)'}} onMouseMove={this.props.hover} class='circle-container text-center'>
+      <ul
+      style={{background: 'radial-gradient(circle closest-side at '+this.state.pageX+'px '+this.state.pageY+'px, #fff -10%, #121, #000 50%)'}}
+      onMouseMove={this.props.hover}
+      ref={this.myDial}
+      className='circle-container text-center'
+      >
         <li>A</li>
         <li>A#</li>
         <li>B</li>

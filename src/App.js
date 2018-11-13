@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Circle from './components/circle-nav/Circle'
 import Select from './components/Select'
 import ChordBar from './components/ChordBar';
+import Diagram from './components/Diagram';
 
 const notes = [
   'A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#'
@@ -19,28 +20,39 @@ class App extends Component {
 
   hover = e => {
     this.setState({
-      x: e.screenX,
-      y: e.screenY
+      x: e.pageX,
+      y: e.pageY
     })
   }
 
   render() {
     return (
-      <div className="container">
-        <div className="row">
-          <Circle hover={this.hover} gradientDegree={this.state.y}/>
+      <React.Fragment>
+        <div className="container">
+          <div className="row">
+            <div className="dial-container">
+              <Circle hover={this.hover} pageX={this.state.x} pageY={this.state.y}/>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-12">Chord Progressions for</div>
+            <div className="col-md-12 chord-selector">
+              <Select options={notes}/>
+              <Select options={keys}/>
+            </div>
+          </div>
         </div>
-        <div className="row">
-          Chord Progressions for
+        <div className="container-fluid">
+          <div className="row">
+            <ChordBar/>
+          </div>
         </div>
-        <div className="row">
-          <Select options={notes}/>
-          <Select options={keys}/>
+        <div className="container">
+          <div className="row">
+            <Diagram/>
+          </div>
         </div>
-        <div className="row">
-          <ChordBar/>
-        </div>
-      </div>
+      </React.Fragment>
     );
   }
 }
