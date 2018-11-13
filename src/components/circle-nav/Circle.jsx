@@ -30,7 +30,7 @@ class Circle extends Component {
   render() {
     return (
       <ul
-      style={{background: 'radial-gradient(circle farthest-corner at '+this.state.pageX+'px '+this.state.pageY+'px, #fff -10%, #121, #000 50%)'}}
+      style={{background: 'radial-gradient(circle farthest-corner  at '+this.state.pageX+'px '+this.state.pageY+'px, #f92a89 5%, #7a0c9a, #55049f 120%)'}}
       onMouseMove={this.props.hover}
       ref={this.myDial}
       className='circle-container text-center'
