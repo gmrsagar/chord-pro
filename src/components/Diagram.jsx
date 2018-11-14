@@ -8,7 +8,7 @@ class Diagram extends Component {
     return (
       <div className="chord-diagram-container">
         <div className="diagram-header">
-          <h1>Bdim</h1>
+          <h3 className="chord-header-title">Bdim</h3>
         </div>
         <div className="diagram-body">
           <div className="chord-container">

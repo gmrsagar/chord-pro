@@ -6,7 +6,7 @@ class ChordBar extends Component {
     return (
       <ul className="results">
         <li>Am</li>
-        <li>Bdim</li>
+        <li className="active">Bdim</li>
         <li>Dm</li>
         <li>F</li>
         <li>G</li>

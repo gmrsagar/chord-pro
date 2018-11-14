@@ -25,18 +25,24 @@ class App extends Component {
     })
   }
 
+  setNote = note => {
+    this.setState({
+      note
+    })
+  }
+
   render() {
     return (
       <React.Fragment>
         <div className="container top-section">
           <div className="row">
             <div className="dial-container">
-              <Circle hover={this.hover} pageX={this.state.x} pageY={this.state.y}/>
+              <Circle notes={notes} setNote={this.setNote} hover={this.hover} pageX={this.state.x} pageY={this.state.y}/>
             </div>
           </div>
           <div className="row">
             <div className="col-md-12 text-center">Chord Progressions for</div>
-            <div className="col text-center chord-selector">
+            <div className="text-center chord-selector">
               <Select options={notes}/>
               <Select options={keys}/>
             </div>
@@ -44,7 +50,7 @@ class App extends Component {
         </div>
         <div className="container-fluid">
           <div className="row">
-            <ChordBar/>
+            <ChordBar note={this.state.note}/>
           </div>
         </div>
         <div className="container">

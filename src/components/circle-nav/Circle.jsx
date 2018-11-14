@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Note from './Note';
 
 class Circle extends Component {
 
@@ -35,18 +36,8 @@ class Circle extends Component {
       ref={this.myDial}
       className='circle-container text-center'
       >
-        <li>A</li>
-        <li>A#</li>
-        <li>B</li>
-        <li>C</li>
-        <li>C#</li>
-        <li>D</li>
-        <li>D#</li>
-        <li>E</li>
-        <li>F</li>
-        <li>F#</li>
-        <li>G</li>
-        <li>G#</li>
+        <Note setNote={this.props.setNote} notes={this.props.notes}/>
+
       </ul>
     );
   }
