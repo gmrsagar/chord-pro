@@ -1,37 +1,64 @@
 import React, { Component } from 'react';
-import logo from './assets/dial.png'
-import ProgressArc from './progressArc';
+import Circle from './components/circle-nav/Circle'
+import Select from './components/Select'
+import ChordBar from './components/ChordBar';
+import Diagram from './components/Diagram';
+
+const notes = [
+  'A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#'
+]
+
+const keys = [ 'Major', 'minor']
 
 class App extends Component {
 
   state = {
-    percentComplete: 0.3,
+    x: '',
+    y: '',
+    note: ''
   }
 
-  togglePercent = () => {
-    const percentage = this.state.percentComplete === 0.3 ? 0.7 : 0.3
-    this.setState({ percentComplete: percentage })
+  hover = e => {
+    this.setState({
+      x: e.pageX,
+      y: e.pageY
+    })
+  }
+
+  setNote = note => {
+    this.setState({
+      note
+    })
   }
 
   render() {
-    console.log(logo)
     return (
-      <div>
-        <ul class='circle-container text-center'>
-        <li>A</li>
-        <li>B</li>
-        <li>C</li>
-        <li>D</li>
-        <li>E</li>
-        <li>F</li>
-        <li>G</li>
-        <li>A</li>
-        <li>B</li>
-        <li>C</li>
-        <li>D</li>
-        <li>E</li>
-        </ul>
-      </div>
+      <React.Fragment>
+        <div className="container top-section">
+          <div className="row">
+            <div className="dial-container">
+              <Circle notes={notes} setNote={this.setNote} hover={this.hover} pageX={this.state.x} pageY={this.state.y}/>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-12 text-center">Chord Progressions for</div>
+            <div className="text-center chord-selector">
+              <Select options={notes}/>
+              <Select options={keys}/>
+            </div>
+          </div>
+        </div>
+        <div className="container-fluid">
+          <div className="row">
+            <ChordBar note={this.state.note}/>
+          </div>
+        </div>
+        <div className="container">
+          <div className="row">
+            <Diagram/>
+          </div>
+        </div>
+      </React.Fragment>
     );
   }
 }

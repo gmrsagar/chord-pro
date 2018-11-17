@@ -3,3 +3,77 @@
 
 body
     font-family: 'Khula', sans-serif
+
+.select-title
+    display: block
+
+.results
+    list-style-type: none
+    width: 100%
+    padding-left: unset    
+    background-image: linear-gradient(-90deg, #EBE9EE, #F5F3F0)
+
+    li
+        display: inline-block
+        padding: 1rem
+        width: 20%
+        text-align: center
+
+        &.active
+            background-image: linear-gradient(-90deg, #7a0c9a, #f92a89)
+            color: #FFF
+            border-radius: 36px
+
+
+.dial-container
+    width: 100%
+    margin-bottom: 5rem
+
+.chord-selector
+    padding-right: 2rem
+    min-width: 12rem
+    background-image: linear-gradient(-90deg, #EBE9EE, #F5F3F0)
+    border-radius: 36px
+    margin: 0 auto
+
+    select
+        padding: 1rem
+        &:first-child
+            border-right: 1px solid #E8D1D1
+        &::after
+            content: ''
+            background: url("https://unsplash.it/200/300")
+            background-position: center center
+            background-size: cover
+        // reset
+        background: none
+        margin: 0
+        border: none
+        -webkit-box-sizing: border-box
+        -moz-box-sizing: border-box
+        box-sizing: border-box
+        -webkit-appearance: none
+        -moz-appearance: none
+
+.chord-container
+    border: 1px solid #e6e6e6
+    border-radius: 10%
+    padding: 10px
+    float: none
+    margin: 0 auto
+    width: 8rem
+
+.top-section
+    background-color: #FDFFFA
+    padding-bottom: 2.8rem
+
+.circle-container
+    li
+        color: #978fab
+
+.chord-diagram-container
+    padding: 2rem
+    padding-top: 0.2rem
+
+.chord-header-title
+    font-size: 1.3rem
