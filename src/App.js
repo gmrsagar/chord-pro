@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Circle from './components/circle-nav/Circle'
 import Select from './components/Select'
-import ChordBar from './components/ChordBar';
+// import ChordBar from './components/ChordBar';
+import ChordBarContainer from './components/ChordBarContainer'
 import Diagram from './components/Diagram';
 
 const notes = [
@@ -50,7 +51,7 @@ class App extends Component {
         </div>
         <div className="container-fluid">
           <div className="row">
-            <ChordBar note={this.state.note}/>
+            <ChordBarContainer note={this.state.note} dict={notes}/>
           </div>
         </div>
         <div className="container">
