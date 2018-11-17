@@ -14,7 +14,6 @@ const SCALES = [
   }
 ]
 
-console.log(SCALES)
 
 
 class ChordBarContainer extends Component {
@@ -35,12 +34,36 @@ class ChordBarContainer extends Component {
     return SCALES.filter( scale => scale.name === scalename )
   }
 
-  getNotes = (note) => {
-    
+  getNotes = note => {
+    let chromaticNote = this.getChromaticNotes(note)
+    let scale = this.getScale('Major')
+    let j = 0
+    let actualNotes = [chromaticNote[j]]
+
+    for( let i=0; i <= scale[0].interval.length; i++ ) {
+      console.log(i)
+      switch( scale[0].interval[i] ) {
+        case 'W':
+        
+          j += 2
+          break;
+
+        // default case now becomes case for 'H'
+        default:
+        
+          j += 1
+          break;
+      }
+      
+      actualNotes.push(chromaticNote[j])
+
+    }
+
+    return actualNotes
   }
 
   render() {
-    console.log( this.getScale('Major') )
+    console.log(this.getNotes('C'))
     return (
       <ChordBar/>
     );

@@ -38,7 +38,7 @@ class App extends Component {
         <div className="container top-section">
           <div className="row">
             <div className="dial-container">
-              <Circle notes={notes} setNote={this.setNote} hover={this.hover} pageX={this.state.x} pageY={this.state.y}/>
+              <Circle notes={notes} setNote={this.setNote}  pageX={this.state.x} pageY={this.state.y}/>
             </div>
           </div>
           <div className="row">
