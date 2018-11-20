@@ -35,12 +35,45 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="container top-section">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-sm-12 col-md-5 col-lg-4">
+              <div className="top-section">
+              <div className="dial-container">
+                <Circle notes={notes} setNote={this.setNote}  pageX={this.state.x} pageY={this.state.y}/>
+              </div>
+              </div>
+            </div>
+            <div className="col-sm-12 col-md-7 col-lg-8">
+            <div className="row">
+            <div className="col-md-12 text-center">Chord Progressions for</div>
+            <div className="text-center chord-selector">
+              <Select options={notes}/>
+              <Select options={keys}/>
+            </div>
+          </div>
+          <div className="container-fluid">
+          <div className="row">
+            <ChordBarContainer note={this.state.note} dict={notes}/>
+            <Diagram />
+          </div>
+        </div>
+            </div>
+
+
+          </div>
+        </div>
+
+
+
+        {/* <div className="container top-section">
           <div className="row">
             <div className="dial-container">
               <Circle notes={notes} setNote={this.setNote}  pageX={this.state.x} pageY={this.state.y}/>
             </div>
           </div>
+
+
           <div className="row">
             <div className="col-md-12 text-center">Chord Progressions for</div>
             <div className="text-center chord-selector">
@@ -58,7 +91,7 @@ class App extends Component {
           <div className="row">
             <Diagram/>
           </div>
-        </div>
+        </div> */}
       </React.Fragment>
     );
   }

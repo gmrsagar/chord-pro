@@ -38,10 +38,10 @@ class ChordBarContainer extends Component {
     let chromaticNote = this.getChromaticNotes(note)
     let scale = this.getScale('Major')
     let j = 0
-    let actualNotes = [chromaticNote[j]]
+    let actualNotes = []
 
-    for( let i=0; i <= scale[0].interval.length; i++ ) {
-      console.log(i)
+    for( let i=0; i < scale[0].interval.length; i++ ) {
+      actualNotes.push(chromaticNote[j])
       switch( scale[0].interval[i] ) {
         case 'W':
         
@@ -53,9 +53,7 @@ class ChordBarContainer extends Component {
         
           j += 1
           break;
-      }
-      
-      actualNotes.push(chromaticNote[j])
+      }      
 
     }
 
