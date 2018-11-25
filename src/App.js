@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Circle from './components/circle-nav/Circle'
 import Select from './components/Select'
 // import ChordBar from './components/ChordBar';
-import ChordBarContainer from './components/ChordBarContainer'
+import ChordBarContainer from './components/chordbar/ChordBarContainer'
 import Diagram from './components/Diagram';
 
 const notes = [
@@ -16,7 +16,7 @@ class App extends Component {
   state = {
     x: '',
     y: '',
-    note: ''
+    note: 'C'
   }
 
   hover = e => {
