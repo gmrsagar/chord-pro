@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import ChordBar from './ChordBar'
 
 const SCALES = [
@@ -16,7 +16,7 @@ const SCALES = [
 
 
 
-class ChordBarContainer extends Component {
+class ChordBarContainer extends PureComponent {
   state = {  }
   
   // get the chromatic notes starting from a given note

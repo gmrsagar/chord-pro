@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 class ChordBar extends Component {
   state = {  }
+
   render() {
     return (
       <ul className="results">

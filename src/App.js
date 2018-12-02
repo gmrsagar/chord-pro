@@ -40,7 +40,7 @@ class App extends Component {
             <div className="col-sm-12 col-md-5 col-lg-4">
               <div className="top-section">
               <div className="dial-container">
-                <Circle notes={notes} setNote={this.setNote}  pageX={this.state.x} pageY={this.state.y}/>
+                <Circle notes={notes} hover={this.hover} setNote={this.setNote}  pageX={this.state.x} pageY={this.state.y}/>
               </div>
               </div>
             </div>
