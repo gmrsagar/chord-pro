@@ -45,53 +45,23 @@ class App extends Component {
               </div>
             </div>
             <div className="col-sm-12 col-md-7 col-lg-8">
-            <div className="row">
-            <div className="col-md-12 text-center">Chord Progressions for</div>
-            <div className="text-center chord-selector">
-              <Select options={notes}/>
-              <Select options={keys}/>
-            </div>
-          </div>
-          <div className="container-fluid">
-          <div className="row">
-            <ChordBarContainer note={this.state.note} dict={notes}/>
-            <Diagram />
-          </div>
-        </div>
-            </div>
-
-
-          </div>
-        </div>
-
-
-
-        {/* <div className="container top-section">
-          <div className="row">
-            <div className="dial-container">
-              <Circle notes={notes} setNote={this.setNote}  pageX={this.state.x} pageY={this.state.y}/>
-            </div>
-          </div>
-
-
-          <div className="row">
-            <div className="col-md-12 text-center">Chord Progressions for</div>
-            <div className="text-center chord-selector">
-              <Select options={notes}/>
-              <Select options={keys}/>
+              <div className="row">
+                <div className="col-md-12 text-center">Chord Progressions for</div>
+                <div className="text-center chord-selector">
+                  <Select options={notes}/>
+                  <Select options={keys}/>
+                </div>
+              </div>
+              <div className="seperator-medium"></div>
+              <div className="container-fluid">
+                <div className="row">
+                  <ChordBarContainer note={this.state.note} dict={notes}/>
+                  <Diagram />
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div className="container-fluid">
-          <div className="row">
-            <ChordBarContainer note={this.state.note} dict={notes}/>
-          </div>
-        </div>
-        <div className="container">
-          <div className="row">
-            <Diagram/>
-          </div>
-        </div> */}
       </React.Fragment>
     );
   }
