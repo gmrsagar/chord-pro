@@ -3,7 +3,7 @@ import Diagram from '../Diagram'
 
 class ChordBar extends Component {
   state = { 
-    activeNote: '',
+    activeNote: '', 
     activeKey: 0
    }
 
@@ -12,7 +12,13 @@ class ChordBar extends Component {
       activeNote,
       activeKey
     })
-  } 
+  }
+  
+  componentWillMount() {
+    this.setState({
+      activeNote: this.props.chords[0]
+    })    
+  }
 
   isActive = id => {
     return this.state.activeKey === id
