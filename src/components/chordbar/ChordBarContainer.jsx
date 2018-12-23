@@ -17,8 +17,16 @@ const SCALES = [
 
 
 class ChordBarContainer extends PureComponent {
-  state = {  }
-  
+  state = { 
+    activeNote: ''
+   }
+
+  setActiveNote = activeNote => {
+    this.setState({
+      activeNote
+    })
+  } 
+
   // get the chromatic notes starting from a given note
   getChromaticNotes = note => {
     let dict_notes = this.props.dict
@@ -83,13 +91,12 @@ class ChordBarContainer extends PureComponent {
     let scale = this.getNotes(chromaticNote, scaleForm)
     let chords = this.getChords(scale, scaleForm)
     return this.getRandomChords(chords)
-
   }
 
   render() {
     let progression = this.getProgression(this.props.note)
     return (
-      <ChordBar chords={progression}/>
+      <ChordBar activeNote={this.state.activeNote} setActiveNote={this.setActiveNote} chords={progression}/>
     );
   }
 }
