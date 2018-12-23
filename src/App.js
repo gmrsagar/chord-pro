@@ -3,13 +3,12 @@ import Circle from './components/circle-nav/Circle'
 import Select from './components/Select'
 // import ChordBar from './components/ChordBar';
 import ChordBarContainer from './components/chordbar/ChordBarContainer'
-import Diagram from './components/Diagram';
 
 const notes = [
   'A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#'
 ]
 
-const keys = [ 'Major', 'minor']
+const keys = [ 'major', 'minor']
 
 class App extends Component {
 
@@ -49,11 +48,11 @@ class App extends Component {
               <div className="row">
                 <div className="col-md-12 text-center">Chord Progressions for</div>
                 <div className="text-center chord-selector">
-                  <Select options={notes}/>
+                  <Select activeNote={this.state.note} onChangeHandler={this.setNote} options={notes} setNote={this.setNote}/>
                   <Select options={keys}/>
                 </div>
               </div>
-              <div className="sep--medium hidden-sm"></div>              
+              <div className="sep--medium hidden-sm"></div>
               <div className="container-fluid">
                 <div className="row no-gutter">
                   <ChordBarContainer note={this.state.note} dict={notes}/>
