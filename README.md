@@ -1,1 +1,3 @@
-# Coming Soon
+# Chord Pro [WIP]
+
+Chord Progression Generator
