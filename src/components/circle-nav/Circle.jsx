@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import Note from './Note';
 
-class Circle extends Component {
+class Circle extends PureComponent {
 
   constructor(props) {
     super(props)
