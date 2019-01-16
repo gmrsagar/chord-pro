@@ -1,7 +1,7 @@
 {
-  "main.css": "/chord-pro/static/css/main.366bf226.chunk.css",
-  "main.js": "/chord-pro/static/js/main.b503c29d.chunk.js",
-  "main.js.map": "/chord-pro/static/js/main.b503c29d.chunk.js.map",
+  "main.css": "/chord-pro/static/css/main.8df83c0c.chunk.css",
+  "main.js": "/chord-pro/static/js/main.e3e69340.chunk.js",
+  "main.js.map": "/chord-pro/static/js/main.e3e69340.chunk.js.map",
   "static/css/1.3c452987.chunk.css": "/chord-pro/static/css/1.3c452987.chunk.css",
   "static/js/1.e9519004.chunk.js": "/chord-pro/static/js/1.e9519004.chunk.js",
   "static/js/1.e9519004.chunk.js.map": "/chord-pro/static/js/1.e9519004.chunk.js.map",
@@ -9,8 +9,8 @@
   "runtime~main.js.map": "/chord-pro/static/js/runtime~main.f70ae91f.js.map",
   "static/css/1.3c452987.chunk.css.map": "/chord-pro/static/css/1.3c452987.chunk.css.map",
   "static/media/index.sass": "/chord-pro/static/media/dial.8f39f8f5.png",
-  "static/css/main.366bf226.chunk.css.map": "/chord-pro/static/css/main.366bf226.chunk.css.map",
+  "static/css/main.8df83c0c.chunk.css.map": "/chord-pro/static/css/main.8df83c0c.chunk.css.map",
   "index.html": "/chord-pro/index.html",
-  "precache-manifest.8a5a08fe672c822b5902d7362063d324.js": "/chord-pro/precache-manifest.8a5a08fe672c822b5902d7362063d324.js",
+  "precache-manifest.d9d43220817783cba46445925664a5d0.js": "/chord-pro/precache-manifest.d9d43220817783cba46445925664a5d0.js",
   "service-worker.js": "/chord-pro/service-worker.js"
 }

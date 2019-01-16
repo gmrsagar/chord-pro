@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/chord-pro/precache-manifest.8a5a08fe672c822b5902d7362063d324.js"
+  "/chord-pro/precache-manifest.d9d43220817783cba46445925664a5d0.js"
 );
 
 workbox.clientsClaim();
