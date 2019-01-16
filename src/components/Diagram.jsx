@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 const images = require.context('../assets/images/chord-diagram/', true);
-const Bdim = images('./bdim-01.png')  
+const Bdim = images('./bdim-01.png');  
 
 class Diagram extends Component {
   state = {  }

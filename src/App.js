@@ -8,14 +8,15 @@ const notes = [
   'A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#'
 ]
 
-const keys = [ 'major', 'minor']
+const keys = [ 'Major', 'Minor']
 
 class App extends Component {
 
   state = {
     x: '',
     y: '',
-    note: 'C'
+    note: 'C',
+    chordKey: 'Major'
   }
 
   hover = e => {
@@ -28,6 +29,12 @@ class App extends Component {
   setNote = note => {
     this.setState({
       note
+    })
+  }
+
+  setKey = chordKey => {
+    this.setState({
+      chordKey
     })
   }
 
@@ -49,13 +56,13 @@ class App extends Component {
                 <div className="col-md-12 text-center">Chord Progressions for</div>
                 <div className="text-center chord-selector">
                   <Select activeNote={this.state.note} onChangeHandler={this.setNote} options={notes} setNote={this.setNote}/>
-                  <Select options={keys}/>
+                  <Select options={keys} onChangeHandler={this.setKey} activeKey={this.state.chordKey}/>
                 </div>
               </div>
               <div className="sep--medium hidden-sm"></div>
               <div className="container-fluid">
                 <div className="row no-gutter">
-                  <ChordBarContainer note={this.state.note} dict={notes}/>
+                  <ChordBarContainer note={this.state.note} chordKey={this.state.chordKey} dict={notes}/>
                 </div>
               </div>
             </div>

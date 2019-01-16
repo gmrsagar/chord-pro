@@ -87,14 +87,16 @@ class ChordBarContainer extends PureComponent {
 
   getProgression = note => {
     let chromaticNote = this.getChromaticNotes(note)
-    let scaleForm = this.getScale('Major')
+    let scaleForm = this.getScale(this.props.chordKey)
     let scale = this.getNotes(chromaticNote, scaleForm)
     let chords = this.getChords(scale, scaleForm)
     return this.getRandomChords(chords)
   }
 
   render() {
+    
     let progression = this.getProgression(this.props.note)
+    
     return (
       <ChordBar activeNote={this.state.activeNote} setActiveNote={this.setActiveNote} chords={progression}/>
     );
